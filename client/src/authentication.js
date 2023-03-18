@@ -7,6 +7,7 @@ import {UAuthConnector} from '@uauth/web3-react'
 UAuthConnector.registerUAuth(UAuth);
 
 const metaMask = initializeConnector((actions) => new MetaMask({ actions }));
+const uri = window.location.origin
 
 const walletConnect = initializeConnector(
   (actions) =>
@@ -24,7 +25,7 @@ const uauth = initializeConnector(
     actions,
     options: {
       clientID: process.env.REACT_APP_CLIENT_ID,
-      redirectUri: process.env.REACT_APP_REDIRECT_URI,
+      redirectUri: uri,
       scope: 'openid wallet',
 
       connectors: {injected: metaMask[0], walletconnect: walletConnect[0]}
