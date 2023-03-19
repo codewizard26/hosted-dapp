@@ -7,7 +7,7 @@ import {UAuthConnector} from '@uauth/web3-react'
 UAuthConnector.registerUAuth(UAuth);
 
 const metaMask = initializeConnector((actions) => new MetaMask({ actions }));
-const uri = window.location.origin
+// const uri = window.location.origin
 
 const walletConnect = initializeConnector(
   (actions) =>
@@ -24,9 +24,11 @@ const uauth = initializeConnector(
   (actions) => new UAuthConnector({
     actions,
     options: {
+    
       clientID: process.env.REACT_APP_CLIENT_ID,
-      redirectUri: uri,
-      scope: 'openid wallet',
+      redirectUri: "https://icy-star-2141.on.fleek.co/",
+      scope: "openid wallet email profile:optional social:optional",
+      
 
       connectors: {injected: metaMask[0], walletconnect: walletConnect[0]}
     },
