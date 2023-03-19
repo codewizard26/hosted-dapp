@@ -148,7 +148,7 @@ class App extends Component {
                  <div>
                   <MDBCard  className='token img' style={{maxWidth:'22rem'}}>
                   <MDBCardBody className='row'>
-                    <MDBCardTitle>Customer Unstoppable Domain-Name</MDBCardTitle> 
+                    <MDBCardTitle>Customer Unstoppable Domain-Name :{JSON.parse(localStorage.getItem("username")).value}</MDBCardTitle> 
                     <MDBCardText>{this.state.cryptowiz_arr}</MDBCardText>
                     <Container triggerText="Tranfer NFT" onSubmit={this.onSubmit} />
                   </MDBCardBody>

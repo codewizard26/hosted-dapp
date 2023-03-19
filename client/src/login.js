@@ -80,7 +80,9 @@ const walletinfo = () =>{
       <div className="navigation">
       Billing dashboard
       </div>
-
+<div>
+  <h3>Please login with your Unstoppable domain and then generate nft</h3>
+</div>
       <div className="login-card">
         <div className="card-heading">
           Login
